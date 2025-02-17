@@ -1,0 +1,51 @@
+<div class="header-container" [ngClass]="{'scrolling': isScrolling || isNotLandingPage}">
+    <div class="header-wrapper">
+        <div class="left-section">
+            <img *ngIf="!isScrolling && !isNotLandingPage" class="logo"
+                src="./../../../../assets/images/icons/logo-white.svg" alt="Logo">
+            <img *ngIf="isScrolling || isNotLandingPage" class="logo"
+                src="./../../../../assets/images/icons/logo-black.svg" alt="Logo">
+            <div class="menu" [ngClass]="{'scrolling': isScrolling, 'not-landing': isNotLandingPage}">
+                <div [routerLink]="['/']" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
+                    class="menu-item">
+                    <p>Home</p>
+                </div>
+                <div [routerLink]="['/about-us']" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
+                    class="menu-item">
+                    <p>About</p>
+                </div>
+                <div [routerLink]="['/contact-us']" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
+                    class="menu-item">
+                    <p>Contact</p>
+                </div>
+            </div>
+
+            <div class="menu-container">
+                <div *ngIf="isMobileMenuActive" class="mobile-menu">
+                    <div class="close-container">
+                        <img class="logo" alt="Logo" src="../../../../assets/images/icons/logo-black.svg">
+                        <img class="icon" (click)="toggleMobileMenu()" src="../../../../assets/images/icons/close.svg"
+                            alt="Close icon">
+                    </div>
+                    <div class="options-container">
+                        <a (click)="toggleMobileMenu()" [routerLink]="['/']" [routerLinkActiveOptions]="{exact:true}"
+                            routerLinkActive="active" class="mobile-item">Home</a>
+                        <a (click)="toggleMobileMenu()" [routerLink]="['/about-us']"
+                            [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
+                            class="mobile-item">About</a>
+                        <a (click)="toggleMobileMenu()" [routerLink]="['/contact-us']"
+                            [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active"
+                            class="mobile-item">Contact</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="right-section">
+            <img *ngIf="!isScrolling && !isNotLandingPage" (click)="toggleMobileMenu()" class="menu-icon"
+                src="../../../../assets/images/icons/menu-bar.svg" alt="Menu icon">
+            <img *ngIf="isScrolling || isNotLandingPage" (click)="toggleMobileMenu()" class="menu-icon"
+                src="../../../../assets/images/icons/menu-bar-black.svg" alt="Menu icon">
+        </div>
+    </div>
+</div>

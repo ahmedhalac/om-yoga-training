@@ -1,0 +1,371 @@
+@import "../../shared/scss/colors.scss";
+@import "../../shared/scss/mixins.scss";
+
+.about-container {
+  .about-wrapper {
+    .bussiness-section {
+      width: 100%;
+      position: relative;
+
+      @include media(">=desktop") {
+        padding: 94px 0px;
+      }
+
+      .bussiness-container {
+        .backgrounds {
+          @include media("<tablet") {
+            display: none;
+          }
+
+          .bg-left {
+            left: 0;
+            @include background-position(0, 180);
+          }
+
+          .bg-right {
+            right: 0;
+            @include background-position-rotated(0, 180);
+          }
+
+          .bg-left,
+          .bg-right {
+            height: 600px;
+
+            @include media("<desktop") {
+              height: 480px;
+            }
+          }
+        }
+
+        .bussiness-wrapper {
+          @include center;
+          @include display-flex;
+          align-items: stretch;
+          flex-direction: column;
+          gap: 40px;
+          padding: 48px 16px;
+
+          @include media(">=tablet") {
+            padding: 96px 24px;
+            gap: 64px;
+          }
+
+          @include media(">=desktop") {
+            padding: 96px 64px;
+            flex-direction: row-reverse;
+            gap: 32px;
+          }
+
+          .image-wrapper {
+            @include display-flex;
+            width: 100%;
+
+            @include media(">=desktop") {
+              justify-content: flex-end;
+            }
+
+            .bussiness-img {
+              border-radius: 1000px 1000px 0px 0px;
+              object-fit: cover;
+              background-repeat: no-repeat;
+              min-height: 400px;
+              max-height: 400px;
+              width: 100%;
+              z-index: 1;
+
+              @include media(">=tablet") {
+                width: calc(100% - 248px);
+                min-height: 480px;
+                max-height: 480px;
+              }
+
+              @include media(">=desktop") {
+                width: calc(100% - 99px);
+                min-height: 711px;
+                max-height: 711px;
+              }
+            }
+          }
+
+          .content {
+            @include display-flex;
+            flex-direction: column;
+            gap: 40px;
+
+            @include media(">=desktop") {
+              align-items: flex-start;
+              width: 100%;
+            }
+
+            .title {
+              color: $primary-text-green;
+              font-family: "FreganSerif";
+              font-size: 40px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 48px;
+              margin: 0;
+
+              @include media(">=tablet") {
+                line-height: 64px;
+              }
+            }
+
+            .text {
+              color: $primary-gray;
+              text-align: center;
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 24px;
+              margin: 0;
+
+              @include media(">=tablet") {
+                font-size: 24px;
+                line-height: 32px;
+                max-width: 768px;
+              }
+
+              @include media(">=desktop") {
+                text-align: start;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .teacher-section {
+      width: 100%;
+      position: relative;
+
+      @include media(">=desktop") {
+        padding: 94px 0px;
+      }
+
+      .teacher-container {
+        .backgrounds {
+          @include media("<tablet") {
+            display: none;
+          }
+
+          .bg-left {
+            left: 0;
+            @include background-position(0, 180);
+          }
+
+          .bg-right {
+            right: 0;
+            @include background-position-rotated(0, 180);
+          }
+
+          .bg-left,
+          .bg-right {
+            height: 600px;
+
+            @include media("<desktop") {
+              height: 480px;
+            }
+          }
+        }
+
+        .teacher-wrapper {
+          @include center;
+          @include display-flex;
+          align-items: stretch;
+          flex-direction: column;
+          gap: 40px;
+          padding: 48px 16px;
+
+          @include media(">=tablet") {
+            padding: 96px 24px;
+            gap: 64px;
+          }
+
+          @include media(">=desktop") {
+            padding: 96px 64px;
+            flex-direction: row;
+            gap: 32px;
+          }
+
+          .image-wrapper {
+            @include display-flex;
+            width: 100%;
+
+            @include media(">=desktop") {
+              justify-content: flex-start;
+              height: 100%;
+            }
+
+            .teacher-img {
+              border-radius: 1000px 1000px 0px 0px;
+              object-fit: cover;
+              background-repeat: no-repeat;
+              min-height: 600px;
+              max-height: 600px;
+              width: 100%;
+              z-index: 1;
+
+              @include media(">=tablet") {
+                width: calc(100% - 248px);
+              }
+
+              @include media(">=desktop") {
+                width: calc(100% - 99px);
+                //min-height: 775px;
+                // max-height: 775px;
+                min-height: unset;
+                max-height: unset;
+              }
+            }
+          }
+
+          .content {
+            @include display-flex;
+            flex-direction: column;
+            gap: 40px;
+
+            @include media(">=desktop") {
+              align-items: flex-start;
+              width: 100%;
+            }
+
+            .title {
+              color: $primary-text-green;
+              font-family: "FreganSerif";
+              font-size: 40px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 48px;
+              margin: 0;
+
+              @include media(">=tablet") {
+                line-height: 64px;
+              }
+            }
+
+            .text {
+              color: $primary-gray;
+              text-align: center;
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 24px;
+              margin: 0;
+
+              @include media(">=tablet") {
+                font-size: 24px;
+                line-height: 32px;
+                max-width: 768px;
+              }
+
+              @include media(">=desktop") {
+                text-align: start;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .question-section {
+      width: 100%;
+      position: relative;
+
+      @include media(">=desktop") {
+        padding: 94px 0px;
+      }
+
+      .question-container {
+        .backgrounds {
+          @include media("<tablet") {
+            display: none;
+          }
+
+          .bg-left {
+            left: 0;
+            @include background-position(0, 180);
+          }
+
+          .bg-right {
+            right: 0;
+            @include background-position-rotated(0, 180);
+          }
+
+          .bg-left,
+          .bg-right {
+            height: 600px;
+
+            @include media("<desktop") {
+              height: 480px;
+            }
+          }
+        }
+
+        .question-wrapper {
+          @include center;
+          @include display-flex;
+          flex-direction: column;
+          padding: 48px 16px;
+
+          @include media(">=tablet") {
+            padding: 96px 24px;
+          }
+
+          @include media(">=desktop") {
+            padding: 96px 64px;
+          }
+
+          .content {
+            @include display-flex;
+            flex-direction: column;
+            gap: 40px;
+            width: 100%;
+            padding-bottom: 64px;
+
+            p {
+              margin: 0;
+            }
+
+            .title {
+              color: $primary-text-green;
+              text-align: center;
+              font-family: "FreganSerif";
+              font-size: 40px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 48px;
+
+              @include media(">=tablet") {
+                line-height: 64px;
+              }
+            }
+
+            .text {
+              color: $primary-gray;
+              text-align: center;
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 24px;
+
+              @include media(">=tablet") {
+                font-size: 24px;
+                line-height: 32px;
+                max-width: 768px;
+              }
+            }
+          }
+
+          .faqs {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            width: 100%;
+            z-index: 1;
+          }
+        }
+      }
+    }
+  }
+}

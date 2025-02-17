@@ -1,0 +1,55 @@
+<div class="wrapper">
+    <div class="backgrounds">
+        <img src="../../../assets/images/backgrounds/bg3.webp" alt="background img" class="bg-left">
+        <img src="../../../assets/images/backgrounds/bg3.webp" alt="background img" class="bg-right">
+    </div>
+    <div class="contact-form-section">
+        <div class="content">
+            <p class="title">Contact Us</p>
+            <p class="supporting-text">For any inquiries or assistance, please don't hesitate to get in touch with us.
+            </p>
+        </div>
+        <div class="form-wrapper">
+            <div class="form">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="d9004f36-d02d-402c-8fcd-53bf96740460">
+                    <input type="hidden" name="redirect"
+                        value="https://www.omyogaandtraining.com/contact-us?submitted=true">
+                    <div class="row">
+                        <div class="mr-24">
+                            <p>First Name</p>
+                            <input type="text" name="firstName" id="firstName" placeholder="First Name" required />
+                        </div>
+                        <div>
+                            <p>Last Name</p>
+                            <input type="text" name="lastName" id="lastName" placeholder="Last Name" required />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <p>Email</p>
+                            <input type="email" name="email" id="email" placeholder="Email" required />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <p>Phone</p>
+                            <input type="text" name="phone" id="phone" placeholder="+1 (555) 000-0000">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <p>Additional comments</p>
+                            <textarea name="additionalComments" id="additionalComments"
+                                placeholder="Write Something"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                        <button type="submit" class="primary">Contact Us</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

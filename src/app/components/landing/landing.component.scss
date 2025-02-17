@@ -1,0 +1,720 @@
+@import "../../shared/scss/colors.scss";
+@import "../../shared/scss/mixins.scss";
+
+.landing-container {
+  .landing-wrapper {
+    .landing-bg {
+      object-fit: cover;
+      background-repeat: no-repeat;
+      position: absolute;
+      background-position: center;
+      top: 0;
+      left: 0;
+      width: 100%;
+      min-height: 552px;
+      z-index: -1;
+
+      @include media(">=416px") {
+        min-height: 504px;
+      }
+
+      @include media(">=668px") {
+        min-height: 456px;
+      }
+
+      @include media(">=tablet") {
+        max-height: 896px;
+        min-height: 896px;
+      }
+    }
+
+    .intro-section {
+      @include center;
+      @include display-flex;
+      min-width: 320px;
+      padding: 96px 16px;
+
+      @include media(">=tablet") {
+        padding: 96px 64px;
+        height: 576px;
+      }
+    }
+
+    .intro-wrapper {
+      @include display-flex;
+      flex-direction: column;
+
+      .title-container {
+        .title {
+          color: $primary-white;
+          text-align: center;
+          font-family: "FreganSerif";
+          font-size: 40px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 48px;
+          margin: 0;
+          padding-bottom: 40px;
+
+          @include media(">=tablet") {
+            font-size: 60px;
+            line-height: 80px;
+          }
+        }
+      }
+
+      .book-now-btn {
+        @include display-flex;
+        width: 100%;
+
+        button {
+          border-radius: 100px;
+          width: 100%;
+          background: $primary-white;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 24px;
+          color: $primary-gray;
+          padding: 12px 32px;
+          border: none;
+          cursor: pointer;
+        }
+
+        @include media(">=tablet") {
+          button {
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+
+  .mission-section {
+    width: 100%;
+    position: relative;
+
+    @include media(">=desktop") {
+      padding: 94px 0px;
+    }
+
+    .mission-container {
+      .backgrounds {
+        @include media("<tablet") {
+          display: none;
+        }
+
+        .bg-left {
+          left: 0;
+          @include background-position(0, 180);
+        }
+
+        .bg-right {
+          right: 0;
+          @include background-position-rotated(0, 180);
+        }
+
+        .bg-left,
+        .bg-right {
+          height: 600px;
+
+          @include media("<desktop") {
+            height: 480px;
+          }
+        }
+      }
+
+      .mission-wrapper {
+        @include center;
+        @include display-flex;
+        flex-direction: column;
+        gap: 40px;
+        padding: 48px 16px;
+
+        @include media(">=tablet") {
+          padding: 96px 24px;
+          gap: 64px;
+        }
+
+        @include media(">=desktop") {
+          padding: 96px 64px;
+        }
+
+        .mission-img {
+          border-radius: 1000px 1000px 0px 0px;
+          object-fit: cover;
+          background-repeat: no-repeat;
+          min-height: 400px;
+          max-height: 400px;
+          width: 100%;
+          z-index: 1;
+
+          @include media(">=tablet") {
+            width: calc(100% - 248px);
+            min-height: 480px;
+            max-height: 480px;
+          }
+
+          @include media(">=desktop") {
+            width: calc(100% - 522px);
+            min-height: 600px;
+            max-height: 600px;
+          }
+        }
+
+        .content {
+          @include display-flex;
+          flex-direction: column;
+          gap: 40px;
+
+          .title {
+            color: $primary-text-green;
+            text-align: center;
+            font-family: "FreganSerif";
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 48px;
+            margin: 0;
+
+            @include media(">=tablet") {
+              line-height: 64px;
+            }
+          }
+
+          .text {
+            color: $primary-gray;
+            text-align: center;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            margin: 0;
+            @include media(">=tablet") {
+              font-size: 24px;
+              line-height: 32px;
+              max-width: 768px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .vision-section {
+    width: 100%;
+    position: relative;
+
+    @include media(">=desktop") {
+      padding: 94px 0px;
+    }
+
+    .vision-container {
+      .backgrounds {
+        @include media("<tablet") {
+          display: none;
+        }
+
+        .bg-left {
+          left: 0;
+          @include background-position(0, 180);
+        }
+
+        .bg-right {
+          right: 0;
+          @include background-position-rotated(0, 180);
+        }
+
+        .bg-left,
+        .bg-right {
+          height: 600px;
+
+          @include media("<desktop") {
+            height: 480px;
+          }
+        }
+      }
+
+      .vision-wrapper {
+        @include center;
+        @include display-flex;
+        flex-direction: column;
+        gap: 40px;
+        padding: 48px 16px;
+
+        @include media(">=tablet") {
+          padding: 96px 24px;
+          gap: 64px;
+        }
+
+        @include media(">=desktop") {
+          padding: 96px 64px;
+        }
+
+        .vision-img {
+          border-radius: 1000px;
+          object-fit: cover;
+          background-repeat: no-repeat;
+          min-height: 240px;
+          max-height: 240px;
+          width: 100%;
+          z-index: 1;
+
+          @include media(">=tablet") {
+            width: calc(100% - 248px);
+            min-height: 320px;
+            max-height: 320px;
+          }
+
+          @include media(">=desktop") {
+            width: calc(100% - 522px);
+            min-height: 400px;
+            max-height: 400px;
+          }
+        }
+
+        .content {
+          @include display-flex;
+          flex-direction: column;
+          gap: 40px;
+
+          .title {
+            color: $primary-text-green;
+            text-align: center;
+            font-family: "FreganSerif";
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 48px;
+            margin: 0;
+
+            @include media(">=tablet") {
+              line-height: 64px;
+            }
+          }
+
+          .text {
+            color: $primary-gray;
+            text-align: center;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            margin: 0;
+            @include media(">=tablet") {
+              font-size: 24px;
+              line-height: 32px;
+              max-width: 768px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .services-section {
+    width: 100%;
+    position: relative;
+
+    @include media(">=desktop") {
+      padding: 94px 0px;
+    }
+
+    .services-container {
+      .backgrounds {
+        @include media("<tablet") {
+          display: none;
+        }
+
+        .bg-left {
+          left: 0;
+          @include background-position(0, 180);
+        }
+
+        .bg-right {
+          right: 0;
+          @include background-position-rotated(0, 180);
+        }
+
+        .bg-left,
+        .bg-right {
+          height: 600px;
+
+          @include media("<desktop") {
+            height: 480px;
+          }
+        }
+      }
+
+      .services-wrapper {
+        @include center;
+        @include display-flex;
+        padding: 48px 16px;
+
+        @include media(">=tablet") {
+          padding: 96px 24px;
+        }
+
+        @include media(">=desktop") {
+          padding: 96px 64px;
+          gap: 32px;
+        }
+
+        .content {
+          @include display-flex;
+          flex-direction: column;
+          width: 100%;
+          gap: 40px;
+
+          @include media(">=desktop") {
+            width: 70%;
+            align-items: flex-start;
+          }
+
+          .title {
+            color: $primary-text-green;
+            text-align: center;
+            font-family: "FreganSerif";
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 48px;
+            margin: 0;
+
+            @include media(">=tablet") {
+              line-height: 64px;
+            }
+          }
+
+          .service-cards {
+            @include display-flex;
+            flex-direction: column;
+            gap: 40px;
+            width: 100%;
+            z-index: 1;
+
+            .service-pair {
+              @include display-flex;
+              flex-direction: column;
+              gap: 40px;
+              width: 100%;
+
+              @include media(">=tablet") {
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 24px;
+              }
+            }
+
+            .card {
+              @include display-flex;
+              flex-direction: column;
+
+              @include media(">=tablet") {
+                width: 50%;
+              }
+
+              @include media(">=desktop") {
+                align-items: flex-start;
+              }
+
+              .card-title {
+                color: $primary-gray;
+                text-align: center;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 32px;
+                letter-spacing: -0.48px;
+                margin: 0;
+                padding: 16px 0px 8px 0px;
+
+                @include media(">=tablet") {
+                  font-size: 32px;
+                  line-height: 40px;
+                  letter-spacing: -0.64px;
+                }
+              }
+
+              .subtitle {
+                color: $primary-gray;
+                text-align: center;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: -0.4px;
+                margin: 0;
+
+                @include media(">=tablet") {
+                  line-height: 32px;
+                  letter-spacing: -0.48px;
+                }
+              }
+
+              &.custom {
+                width: 100%;
+              }
+            }
+          }
+        }
+
+        .services-img {
+          display: none;
+
+          @include media(">=desktop") {
+            display: block;
+            border-radius: 1000px 1000px 0px 0px;
+            object-fit: cover;
+            background-repeat: no-repeat;
+            min-height: 756px;
+            max-height: 756px;
+            width: 30%;
+            z-index: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .testimonial-section {
+    width: 100%;
+    position: relative;
+
+    @include media(">=desktop") {
+      padding: 94px 0px;
+    }
+
+    .backgrounds {
+      @include media("<tablet") {
+        display: none;
+      }
+
+      .bg-left {
+        left: 0;
+        @include background-position(0, 180);
+      }
+
+      .bg-right {
+        right: 0;
+        @include background-position-rotated(0, 180);
+      }
+
+      .bg-left,
+      .bg-right {
+        height: 600px;
+
+        @include media("<desktop") {
+          height: 480px;
+        }
+      }
+    }
+
+    .testimonial-container {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      margin: 48px 16px;
+
+      @include media(">=tablet") {
+        margin: 96px 24px;
+        gap: 64px;
+      }
+
+      @include media(">=desktop") {
+        margin: 128px 64px;
+      }
+
+      .title {
+        color: $primary-text-green;
+        text-align: center;
+        font-family: "FreganSerif";
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 48px;
+        margin: 0;
+
+        @include media(">=tablet") {
+          line-height: 64px;
+        }
+      }
+
+      section {
+        width: 100%;
+        margin: auto;
+        position: relative;
+        z-index: 0;
+
+        @include media(">=tablet") {
+          width: 90%;
+        }
+
+        @include media(">=large-monitor") {
+          width: 70%;
+        }
+
+        .slide {
+          height: 344px;
+        }
+
+        /* Scrollbar */
+        :host ::ng-deep .swiper-scrollbar {
+          position: absolute;
+          bottom: -2rem;
+        }
+
+        :host ::ng-deep .swiper-scrollbar.swiper-scrollbar-horizontal {
+          height: 0.65rem;
+        }
+
+        :host ::ng-deep .swiper-scrollbar.swiper-scrollbar-disabled {
+          display: block;
+        }
+
+        :host
+          ::ng-deep
+          .swiper-scrollbar.swiper-scrollbar-horizontal
+          .swiper-scrollbar-drag {
+          background: navy;
+          height: 0.5rem;
+          padding: 0.1rem;
+        }
+
+        /* Previous and Next buttons */
+
+        .swiper-button-prev,
+        .swiper-button-next {
+          background-color: navy;
+          color: white;
+          padding: 0.5rem;
+          border-radius: 0.5rem;
+        }
+
+        .swiper-button-prev {
+          left: 2rem;
+          right: auto;
+        }
+
+        .swiper-button-next {
+          right: 2rem;
+          left: auto;
+        }
+
+        @media (min-width: 640px) {
+          .swiper-button-prev,
+          .swiper-button-next {
+            padding: 1rem;
+          }
+
+          .swiper-button-prev {
+            left: 10rem;
+          }
+
+          .swiper-button-next {
+            right: 10rem;
+          }
+        }
+      }
+    }
+  }
+
+  .question-section {
+    width: 100%;
+    position: relative;
+
+    @include media(">=desktop") {
+      padding: 94px 0px;
+    }
+
+    .question-container {
+      .backgrounds {
+        @include media("<tablet") {
+          display: none;
+        }
+
+        .bg-left {
+          left: 0;
+          @include background-position(0, 180);
+        }
+
+        .bg-right {
+          right: 0;
+          @include background-position-rotated(0, 180);
+        }
+
+        .bg-left,
+        .bg-right {
+          height: 600px;
+
+          @include media("<desktop") {
+            height: 480px;
+          }
+        }
+      }
+
+      .question-wrapper {
+        @include center;
+        @include display-flex;
+        flex-direction: column;
+        padding: 48px 16px;
+
+        @include media(">=tablet") {
+          padding: 96px 24px;
+        }
+
+        @include media(">=desktop") {
+          padding: 96px 64px;
+        }
+
+        .content {
+          @include display-flex;
+          flex-direction: column;
+          gap: 40px;
+          width: 100%;
+          padding-bottom: 64px;
+
+          p {
+            margin: 0;
+          }
+
+          .title {
+            color: $primary-text-green;
+            text-align: center;
+            font-family: "FreganSerif";
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 48px;
+
+            @include media(">=tablet") {
+              line-height: 64px;
+            }
+          }
+
+          .text {
+            color: $primary-gray;
+            text-align: center;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+
+            @include media(">=tablet") {
+              font-size: 24px;
+              line-height: 32px;
+              max-width: 768px;
+            }
+          }
+        }
+
+        .faqs {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+          width: 100%;
+          z-index: 1;
+        }
+      }
+    }
+  }
+}

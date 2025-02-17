@@ -1,0 +1,17 @@
+<div class="container" (click)="toggleAccordion()">
+    <div class="wrapper">
+        <div class="content">
+            <div class="question">
+                <p class="text">{{question}}</p>
+            </div>
+            <div *ngIf="isExpanded" class="answer">
+                <p class="text" [innerHTML]="answer"></p>
+            </div>
+        </div>
+        <div class="accordion-icons">
+            <img [class.icon-rotated]="isExpanded" src="../../../../assets/images/icons/arrow.svg" alt="Accordion icon"
+                class="icon">
+        </div>
+    </div>
+    <div class="divider"></div>
+</div>

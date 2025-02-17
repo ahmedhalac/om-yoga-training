@@ -1,0 +1,149 @@
+<div class="landing-container">
+    <div class="landing-wrapper">
+        <img class="landing-bg" src="../../../assets/images/banners/landing-intro.webp" alt="Landing image">
+        <section class="intro-section">
+            <div class="intro-wrapper">
+                <div class="title-container">
+                    <p class="title">Mindfulness in Motion: <br>
+                        Where Connection Becomes Practice</p>
+                </div>
+                <div class="book-now-btn">
+                    <button (click)="onBtnClick()">Book Now</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="mission-section">
+            <div class="mission-container">
+                <div class="backgrounds">
+                    <img src="../../../assets/images/backgrounds/bg1.webp" alt="background img" class="bg-left">
+                    <img src="../../../assets/images/backgrounds/bg1.webp" alt="background img" class="bg-right">
+                </div>
+                <div class="mission-wrapper">
+                    <img src="../../../assets/images/banners/landing-mission.webp" alt="Mission" class="mission-img">
+                    <div class="content">
+                        <p class="title">Revitalize Your Well-being</p>
+                        <p class="text">At O.M. Yoga & Training, we dedicate ourselves to fostering meaningful
+                            connections
+                            with our clients through mobile yoga instruction and fitness training. <br><br>
+
+                            Our mission revolves around promoting holistic wellness by cultivating positive experiences
+                            through intentional body movement and conscious breath awareness, empowering individuals on
+                            their journey toward greater physical, mental, and emotional well-being in the comfort of
+                            their
+                            own space.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="vision-section">
+            <div class="vision-container">
+                <div class="backgrounds">
+                    <img src="../../../assets/images/backgrounds/bg2.webp" alt="background img" class="bg-left">
+                    <img src="../../../assets/images/backgrounds/bg2.webp" alt="background img" class="bg-right">
+                </div>
+                <div class="vision-wrapper">
+                    <img src="../../../assets/images/banners/landing-empowering.webp" alt="Vision" class="vision-img">
+                    <div class="content">
+                        <p class="title">Empowering Genuine Connections</p>
+                        <p class="text">Experience a transformative journey towards improved quality of life through
+                            yoga and fitness training. <br><br>
+
+                            Our vision is to create an environment where genuine connections are forged, and positive
+                            experiences are built, guiding you towards authentic joy and empowerment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-section">
+            <div class="services-container">
+                <div class="backgrounds">
+                    <img src="../../../assets/images/backgrounds/bg3.webp" alt="background img" class="bg-left">
+                    <img src="../../../assets/images/backgrounds/bg3.webp" alt="background img" class="bg-right">
+                </div>
+                <div class="services-wrapper">
+                    <div class="content">
+                        <p class="title">Our Services</p>
+                        <div class="service-cards">
+                            <div class="service-pair">
+                                <div class="card">
+                                    <img src="../../../assets/images/icons/services-1.svg" alt="Service card"
+                                        class="card-img">
+                                    <p class="card-title">Private</p>
+                                    <p class="subtitle">Mobile Yoga Classes</p>
+                                </div>
+                                <div class="card">
+                                    <img src="../../../assets/images/icons/services-2.svg" alt="Service card"
+                                        class="card-img">
+                                    <p class="card-title">Group</p>
+                                    <p class="subtitle">Mobile Yoga Classes</p>
+                                </div>
+                            </div>
+                            <div class="service-pair">
+                                <div class="card">
+                                    <img src="../../../assets/images/icons/services-3.svg" alt="Service card"
+                                        class="card-img">
+                                    <p class="card-title">Yoga/Workout</p>
+                                    <p class="subtitle">Programs</p>
+                                </div>
+                                <div class="card">
+                                    <img src="../../../assets/images/icons/services-4.svg" alt="Service card"
+                                        class="card-img">
+                                    <p class="card-title">Personal Fitness</p>
+                                    <p class="subtitle">Training Sessions</p>
+                                </div>
+                            </div>
+                            <div class="card custom">
+                                <img src=" ../../../assets/images/icons/services-5.svg" alt="Service card"
+                                    class="card-img">
+                                <p class="card-title">Online</p>
+                                <p class="subtitle">Private & Group Yoga Classes via video call</p>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="../../../assets/images/banners/landing-services.webp" alt="Services" class="services-img">
+                </div>
+            </div>
+        </section>
+
+        <div class="testimonial-section">
+            <div class="backgrounds">
+                <img src="../../../assets/images/backgrounds/bg4.webp" alt="background img" class="bg-left">
+                <img src="../../../assets/images/backgrounds/bg4.webp" alt="background img" class="bg-right">
+            </div>
+            <div class="testimonial-container">
+                <p class="title">Testimonials</p>
+                <section>
+                    <swiper-container #swiperRef swiperElement [config]="config" init="false">
+                        <swiper-slide class="slide" *ngFor="let slide of slides">
+                            <app-testimonial-card [text]="slide.text" [client]="slide.client"></app-testimonial-card>
+                        </swiper-slide>
+                    </swiper-container>
+                </section>
+            </div>
+        </div>
+
+        <section class="question-section">
+            <div class="question-container">
+                <div class="backgrounds">
+                    <img src="../../../assets/images/backgrounds/bg2.webp" alt="background img" class="bg-left">
+                    <img src="../../../assets/images/backgrounds/bg2.webp" alt="background img" class="bg-right">
+                </div>
+                <div class="question-wrapper">
+                    <div class="content">
+                        <p class="title">Frequently Asked Questions</p>
+                        <p class="text">We're here to provide you with all the information you need to make informed
+                            decisions about your needs.</p>
+                    </div>
+                    <div class="faqs">
+                        <div class="accordions" *ngFor="let faq of faqs">
+                            <app-accordion [question]="faq.question" [answer]="faq.answer"></app-accordion>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

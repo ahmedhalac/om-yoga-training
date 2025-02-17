@@ -1,0 +1,163 @@
+@import "../../scss/colors.scss";
+@import "../../scss/mixins.scss";
+
+.header-container {
+  background: rgba(63, 63, 63, 0.24);
+  border-bottom: 1px solid $primary-olive-green;
+  backdrop-filter: blur(4px);
+  position: relative;
+  top: 0;
+  z-index: 10;
+
+  &.scrolling {
+    position: sticky;
+    backdrop-filter: none;
+    background: $primary-white;
+  }
+
+  .header-wrapper {
+    @include center;
+    display: flex;
+    flex-direction: row;
+    padding: 16px 64px;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+
+    @include media("<tablet") {
+      justify-content: space-between;
+      height: auto;
+      padding: 16px;
+    }
+
+    .left-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .logo {
+        width: 48px;
+        height: 48px;
+
+        @include media(">=tablet") {
+          padding-bottom: 8px;
+        }
+      }
+    }
+
+    .right-section {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 32px;
+
+      .menu-item {
+        cursor: pointer;
+
+        @media (max-width: 768px) {
+          display: none;
+        }
+      }
+    }
+    .menu-icon {
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
+  }
+  .menu {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+
+    .menu-item {
+      cursor: pointer;
+
+      p {
+        font-family: "Futura";
+        color: $primary-white;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        margin: 0;
+        padding: 8px 0;
+        width: 100px;
+        text-align: center;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &.scrolling,
+    &.not-landing {
+      .menu-item {
+        p {
+          color: $primary-gray;
+        }
+      }
+    }
+  }
+
+  .mobile-menu {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    right: 0;
+    left: 0;
+    backdrop-filter: blur(5px);
+    z-index: 100;
+
+    .close-container {
+      max-width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 16px;
+      background-color: $primary-white;
+
+      img {
+        &.logo {
+          width: 48px;
+          height: 48px;
+        }
+
+        &.icon {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+
+    .options-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 16px;
+      padding: 16px;
+      background-color: $primary-white;
+
+      a {
+        padding: 8px;
+        color: $primary-gray;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 24px;
+        text-decoration: none;
+      }
+    }
+  }
+}
