@@ -2,6 +2,8 @@
 @import "../../shared/scss/mixins.scss";
 .wrapper {
   position: relative;
+  height: calc(100vh - 545px);
+
   .backgrounds {
     @include media("<tablet") {
       display: none;
